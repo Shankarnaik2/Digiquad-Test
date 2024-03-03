@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,12 +14,13 @@ import org.springframework.web.multipart.MultipartFile;
 import com.example.demo.service.FileService;
 
 @RestController
+@Controller
 public class FileUploadController {
     
     @Autowired
     private FileService fileService;
     
-    @PostMapping("/uploadExcel")
+    @PostMapping("/ApiExcel")
     public ResponseEntity<?> uploadExcelFile(@RequestParam("file") MultipartFile file,
                                              @RequestParam("startRow") int startRow) {
         try {
@@ -29,7 +31,7 @@ public class FileUploadController {
         }
     }
 
-    @PostMapping("/uploadXml")
+    @PostMapping("/ApiXml")
     public ResponseEntity<?> uploadXmlFile(@RequestParam("file") MultipartFile file,
                                            @RequestParam("outputLocation") String outputLocation) {
         try {
