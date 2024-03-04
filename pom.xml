@@ -3,7 +3,10 @@
   <groupId>DigiquadTest-1</groupId>
   <artifactId>DigiquadTest-1</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
+  <!-- Dependencies -->
   <dependencies>
+    <!-- Apache POI -->
     <dependency>
         <groupId>org.apache.poi</groupId>
         <artifactId>poi</artifactId>
@@ -14,9 +17,52 @@
         <artifactId>poi-ooxml</artifactId>
         <version>5.2.4</version>
     </dependency>
+    
+    <!-- Spring Framework -->
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-web</artifactId>
+        <version>5.3.14</version>
+    </dependency>
+
+    <!-- Spring Boot Starter Web -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+        <version>2.6.3</version>
+    </dependency>
+
+    <!-- Jakarta XML Binding -->
+    <dependency>
+        <groupId>javax.xml.bind</groupId>
+        <artifactId>jaxb-api</artifactId>
+        <version>2.3.1</version>
+    </dependency>
+    <dependency>
+    <groupId>jakarta.xml.bind</groupId>
+    <artifactId>jakarta.xml.bind-api</artifactId>
+    <version>3.0.0</version> <!-- Use the appropriate version -->
+</dependency>
+<dependency>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter-api</artifactId>
+    <version>5.8.1</version> <!-- Use the appropriate version -->
+    <scope>test</scope>
+</dependency>
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-test</artifactId>
+    <version>2.6.3</version> <!-- Use the appropriate version -->
+    <scope>test</scope>
+</dependency>
+
+
   </dependencies>
+  
+  <!-- Build Configuration -->
   <build>
     <plugins>
+      <!-- Maven Compiler Plugin -->
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.8.1</version>
